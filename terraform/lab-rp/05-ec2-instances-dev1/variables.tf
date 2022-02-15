@@ -73,24 +73,21 @@ variable "ec2_delete_on_termination" {
 
 variable "aws_vpc_selected_dev" {
   description = "VPC selected is dev"
-  //default     = "vpc-089ee9edc5b376a32"//dev1 vpc id//"vpc-089ee9edc5b376a32"
-  default = "vpc-012d34854369f0a06" //carredesable
-}
-
-variable "aws_key_pair" {
-  default = "~/.aws/aws_keys/carredesable1-rp.pem"
+  //default = "Dev_vpc"
+  default = "vpc-089ee9edc5b376a32"
 }
 
 variable "aws_subnet_selected_dev" {
   description = "Subnet selected is dev"
-  //default     = "Web_carredesable_azd_net"
-  //default = "Web_Dev_aza_net"
-  //default = "Web_carredesable_aza_net"
-  default = "subnet-0d4b6d25ebd3bb0e1"
+  default     = "Web_Dev_aza_net"
 }
 
 variable "aws_security_group_selected_dev" {
   description = "Security Group selected is dev"
-  default     = "Mgmt_sg"
+  //default = "Mgmt_sg"
+  default = "sg-0050d9ddeeb82adf4"
 }
-# ===================================================
+
+variable "aws_key_pair" {
+  default = "~/.aws/aws_keys/dev1-rp.pem"
+}

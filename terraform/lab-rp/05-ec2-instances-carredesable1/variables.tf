@@ -5,7 +5,7 @@ variable "aws_region" {
   description = "a specific AWS region"
 }
 
-variable "aws_application" {  
+variable "aws_application" {
   description = "Name of application"
 }
 
@@ -73,15 +73,27 @@ variable "ec2_delete_on_termination" {
 
 variable "aws_vpc_selected_dev" {
   description = "VPC selected is dev"
-  default = "Dev_vpc"
+  //default = "Dev_vpc"
+  //default = "carredesable_vpc"
+  //default = "vpc-089ee9edc5b376a32"
+  default = "vpc-012d34854369f0a06"//carredesable1/carredesable_vpc
 }
 
 variable "aws_subnet_selected_dev" {
   description = "Subnet selected is dev"
-  default = "Web_Dev_aza_net"
+  //default     = "Web_Dev_aza_net"
+  default = "Web_carredesable_aza_net"//carredesable1
 }
 
 variable "aws_security_group_selected_dev" {
   description = "Security Group selected is dev"
-  default = "Mgmt_sg"
+  //default = "Mgmt_sg"
+  //default = "sg-0050d9ddeeb82adf4"
+  default = "sg-04793f99f275d683b"//carredesable1
+  //default = "http_server_sg"
+}
+
+variable "aws_key_pair" {
+  //default = "~/.aws/aws_keys/dev1-rp.pem"
+  default = "~/.aws/aws_keys/carredesable1-rp.pem"
 }
