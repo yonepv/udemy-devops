@@ -59,7 +59,6 @@ resource "aws_elb" "elb" {
     lb_port = 80
     lb_protocol = "http"
   }
-
 }
 
 resource "aws_instance" "http_servers" {
