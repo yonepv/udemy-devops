@@ -13,7 +13,7 @@ variable environment {
 terraform {
   backend "s3" {
     bucket         = "dev-apps-backend-state-rp-abc"
-    key = "dev/07-backend-state/users/backend-state"//better organized (by folders)
+    key = "07-backend-state/users/backend-state"//better organized (by folders)
     //key            = "07-backend-state-users-dev"
     //	key            = "${var.application_name}-${var.project_name}-${var.environment}"
     region         = "ca-central-1"
@@ -27,5 +27,6 @@ provider "aws" {
 }
 
 resource "aws_iam_user" "rp_iam_user" {
-  name = "rp_iam_user_abc"
+  //name = "rp_iam_user_abc"
+  name = "${terraform.workspace}_rp_iam_user_abc"
 }
